@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.17">
+
+  
+  <!-- Spot Style - Default Polygon Spot Style -->
+  <style name="PolygonDefaultPolygonSpotStyle"
+           visible="false"
+           borderwidth="0"
+           borderwidthhover="4"
+           bordercolor="0xffffff" borderalpha="1"
+           fillcolor="0xffffff"   fillalpha="0.4"
+           bordercolorhover="0xffffff" borderalphahover="1"
+           fillcolorhover="0xffffff"   fillalphahover="0.4"
+           capture="false"
+           onhover="onhoverPolygonDefaultPolygonSpotStyle"
+           onout="onoutPolygonDefaultPolygonSpotStyle"
+           alturl="%FIRSTXML%/spots/default_spot_user_defaultpolygon1.png"
+           altscale="1.0"
+           frame="0"
+           lastframe="19"
+           frameheight="64"
+           framewidth="64"
+           altonloaded="setdefaultanimatedspotframe();startspotanimation(0.1);"
+           />
+  <action name="onhoverPolygonDefaultPolygonSpotStyle">
+    showTooltip(hotspot);
+  </action>
+  <action name="onoverPolygonDefaultPolygonSpotStyle">pauseautorotation();
+  </action>
+  <action name="onoutPolygonDefaultPolygonSpotStyle">
+    hideTooltip();resumeautorotation();
+  </action>
+
+<!-- ************ -->
+<!-- Double click -->
+<!-- ************ -->
+  <plugin name="doubleclick"  url="%FIRSTXML%/graphics/doubleclick/fieldofview_dc.js" keep="true" ondblclick="ondoubleclick();"/>
+  <action name="ondoubleclick">switchFullscreen();
+
+  </action>
+<!-- ************ -->
+<!-- Context Menu -->
+<!-- ************ -->
+  <contextmenu fullscreen="false">
+    <item name="normal"        onclick="setViewNormal();" separator="true"/>
+    <item name="architectural" onclick="setViewArchitectural();"/>
+    <item name="littleplanet"  onclick="setViewLittlePlanet();"/>
+    <item name="fullscreenentry" onclick="enterFullscreen();" separator="true"/>
+  </contextmenu>
+
+  <events name="contextmenuevents" keep="true" onenterfullscreen="updateContextMenu" onexitfullscreen="updateContextMenu" onxmlcomplete="updateContextMenu"/>
+  <action name="updateContextMenu">
+    getmessage(contextmenu.item[normal].caption, contextmenunormallabel);
+    getmessage(contextmenu.item[architectural].caption, contextmenuarchitecturallabel);
+    getmessage(contextmenu.item[littleplanet].caption, contextmenulittleplanetlabel);
+    if(tour_fullscreen,
+      getmessage(contextmenu.item[fullscreenentry].caption, contextmenucloseFsLabel);
+      set(contextmenu.item[fullscreenentry].onclick, exitFullscreen(););
+     ,
+      getmessage(contextmenu.item[fullscreenentry].caption, contextmenuopenFsLabel);
+      set(contextmenu.item[fullscreenentry].onclick, enterFullscreen(););
+    );
+  </action>
+<!-- ********* -->
+<!-- Gyroscope -->
+<!-- ********* -->
+<plugin name="gyroscope"
+        url="graphics/gyro.js"
+        keep="true"
+        devices="tablet|mobile"
+        onavailable="delayedcall(1, checkGyroAvailability(););"
+        enabled="true"
+        />
+
+<action name="changeGyroscopeState">
+  ifnot (plugin[gyroscope].available === undefined,
+    if (plugin[gyroscope].available,
+      switch(plugin[gyroscope].enabled);
+      if (plugin[gyroscope].enabled, events.dispatch(ongyroscopeon);, events.dispatch(ongyroscopeoff););
+    );
+  );
+</action>
+
+<action name="checkGyroAvailability">
+	ifnot (plugin[gyroscope].available === undefined, 
+		if (plugin[gyroscope].available,
+			set(tour_gyroscopedevices, true);
+			events.dispatch(ongyroscopeavailable);
+			if (plugin[gyroscope].enabled, events.dispatch(ongyroscopeon);, events.dispatch(ongyroscopeoff););
+		,
+			set(tour_gyroscopedevices, false);
+			set(plugin[gyroscope].enabled, false);
+		);
+	,
+		set(tour_gyroscopedevices, false);
+		set(plugin[gyroscope].enabled, false);
+	);
+</action>
+  <!-- ******************** -->
+  <!-- Combobox : panoramas -->
+  <!-- ******************** -->
+
+
+<events name="combopanolistallpanoramasStartTourEvents" onTourStart="set(layer[combopanolistallpanoramas].isStarted, true);if(layer[combopanolistallpanoramas].isLoaded,combopanolistallpanoramasShow(););" keep="true" />
+
+
+  <layer name="combopanolistallpanoramas"
+         url="%FIRSTXML%/graphics/combobox.js"
+         keep="true"
+         visible="false"
+         zorder="3"
+         align="topleft"
+         x="5" y="10"
+         rowcount="10"
+         onloaded="combopanolistallpanoramasLoaded();"
+         isStarted="false"
+         isLoaded="false"
+         itemcount="0"
+         />
+
+  <action name="combopanolistallpanoramasLoaded">
+    
+    layer[combopanolistallpanoramas].removeAll();
+    set(layer[combopanolistallpanoramas].itemcount, 0);
+    
+    combopanolistallpanoramasAddItem(pano20_title, pano20, pano20, false);
+    combopanolistallpanoramasAddItem(pano26_title, pano26, pano26, false);
+    combopanolistallpanoramasAddItem(pano25_title, pano25, pano25, false);
+    combopanolistallpanoramasAddItem(pano24_title, pano24, pano24, false);
+    combopanolistallpanoramasAddItem(pano23_title, pano23, pano23, false);
+    combopanolistallpanoramasAddItem(pano22_title, pano22, pano22, false);
+    combopanolistallpanoramasAddItem(pano21_title, pano21, pano21, false);
+    combopanolistallpanoramasAddItem(pano28_title, pano28, pano28, false);
+    combopanolistallpanoramasAddItem(pano29_title, pano29, pano29, false);
+    combopanolistallpanoramasAddItem(pano30_title, pano30, pano30, false);
+    combopanolistallpanoramasAddItem(pano27_title, pano27, pano27, false);
+    combopanolistallpanoramasAddItem(pano126_title, pano126, pano126, false);
+    combopanolistallpanoramasAddItem(pano124_title, pano124, pano124, false);
+    combopanolistallpanoramasAddItem(pano122_title, pano122, pano122, false);
+    combopanolistallpanoramasAddItem(pano210_title, pano210, pano210, false);
+    combopanolistallpanoramasAddItem(pano228_title, pano228, pano228, false);
+    combopanolistallpanoramasAddItem(pano230_title, pano230, pano230, false);
+    combopanolistallpanoramasAddItem(pano229_title, pano229, pano229, false);
+    combopanolistallpanoramasAddItem(pano226_title, pano226, pano226, false);
+    combopanolistallpanoramasAddItem(pano225_title, pano225, pano225, false);
+    combopanolistallpanoramasAddItem(pano222_title, pano222, pano222, false);
+    combopanolistallpanoramasAddItem(pano221_title, pano221, pano221, false);
+    combopanolistallpanoramasAddItem(pano224_title, pano224, pano224, false);
+    combopanolistallpanoramasAddItem(pano223_title, pano223, pano223, false);
+    combopanolistallpanoramasAddItem(pano220_title, pano220, pano220, false);
+    combopanolistallpanoramasAddItem(pano218_title, pano218, pano218, false);
+    combopanolistallpanoramasAddItem(pano232_title, pano232, pano232, false);
+    combopanolistallpanoramasAddItem(pano231_title, pano231, pano231, false);
+    combopanolistallpanoramasAddItem(pano227_title, pano227, pano227, false);
+    set(layer[combopanolistallpanoramas].isLoaded, true);
+    
+    if(layer[combopanolistallpanoramas].isStarted,
+      combopanolistallpanoramasShow();
+    );
+  </action>
+
+
+  <action name="combopanolistallpanoramasAddItem">
+    getmessage(caption, %1);
+    
+    indexoftxt(found, get(caption), '&amp;');
+    if(found GE 0,
+      subtxt(part1, get(caption), 0, get(found));
+      add(found, 5);
+      subtxt(part2, get(caption), get(found), get(caption.length));
+      txtadd(caption, get(part1), '&amp;', get(part2));
+    );
+    if(%4,
+      txtadd(title, "&#x00A0;&#x00A0;&#x00A0;", get(caption));
+    ,
+      set(title, get(caption));
+    );
+    layer[combopanolistallpanoramas].addIdItem(%2, get(title), mainloadscene(%3));
+    inc(layer[combopanolistallpanoramas].itemcount);
+  </action>
+
+  <events name="combopanolistallpanoramasEvents"
+          hidetourcontrols="combopanolistallpanoramasHide();"
+          showtourcontrols="combopanolistallpanoramasShow();"
+          onnewpano="combopanolistallpanoramasOnPanorama();"
+          keep="true"/>
+
+  <action name="combopanolistallpanoramasHide">
+    set(layer[combopanolistallpanoramas].visible, false);
+  </action>
+  <action name="combopanolistallpanoramasShow">
+  if(layer[combopanolistallpanoramas].isLoaded,
+    if (layer[combopanolistallpanoramas].itemcount GT 0,
+      set(layer[combopanolistallpanoramas].visible, true);
+    ,
+      set(layer[combopanolistallpanoramas].visible, false);
+    );
+  ,
+    set(layer[combopanolistallpanoramas].visible, false);
+  );
+  </action>
+
+  <action name="combopanolistallpanoramasOnPanorama">
+    combopanolistallpanoramasUpdateList();
+  </action>
+
+
+  <action name="combopanolistallpanoramasUpdateList">
+    set(itemtoselect, get(scene[get(xml.scene)].name));
+    layer[combopanolistallpanoramas].selectIdItem(get(itemtoselect));
+  </action>
+
+
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action><action name="setViewArchitectural">
+	stopSetViewTweens();
+	setViewArchitecturalComplete();
+</action>
+
+<action name="setViewArchitecturalComplete">
+	tween(view.fovmax, get(panoview.fovmax), distance(179, 1.00), easeoutquad);
+	tween(view.architectural, 1.0, distance(1.0, 0.45), easeoutquad, 
+		tween(view.fisheye, 0.0, distance(1.0, 0.45), easeoutquad, 
+			set(view.fisheyefovlink, 0.5);
+			set(view.stereographic,false);
+			if(view.pannini, set(view.pannini,false); delayedcall(0,updateobject(true,true)); );
+			tween(view.vlookat, get(panoview.v), 1.25);
+			if(panoview.fov LE view.fov, tween(view.fov, get(panoview.fov), distance(50, 0.45)); );
+		);
+	);
+</action><action name="setViewLittlePlanet">
+	stopSetViewTweens();
+	setViewLittlePlanetComplete();
+</action>
+
+<action name="setViewLittlePlanetComplete">
+	tween(view.architectural, 0.0, 0.25, easeoutquad, 
+		tween(view.vlookat, 90, distance(179, 1.50), easeoutquad);
+		set(backtonormalfirst,false);
+		if(view.pannini == true, set(backtonormalfirst,true) );
+		if(view.stereographic == false, set(backtonormalfirst,true) );
+		if(backtonormalfirst, tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeoutquad, WAIT); );
+		if(view.pannini, set(view.pannini,false); delayedcall(0, updateobject(true,true)); );
+		if(panoview.fovmax LE 150, set(view.fovmax, 150); , set(view.fovmax, get(panoview.fovmax)); );
+		set(view.stereographic, true);
+		set(view.fisheyefovlink, 1.5);
+		tween(view.fisheye, 1.0, distance(1.0, 0.75), easeoutquad);
+		tween(view.fov, 150, distance(179, 0.75), easeoutquad);
+	);
+</action><action name="setViewNormal">
+	stopSetViewTweens();
+	setViewNormalComplete();
+</action>
+
+<action name="setViewNormalComplete">
+	tween(view.architectural, 0.0, distance(1.0, 0.45), easeoutquad,
+		tween(view.fovmax, get(panoview.fovmax), distance(179, 1.00));
+		tween(view.vlookat, get(panoview.v), distance(90, 0.45));
+		tween(view.fisheye, 0.0, distance(1.0, 0.45), easeoutquad,
+			set(view.stereographic,false);
+			if(view.pannini, set(view.pannini,false); delayedcall(0,updateobject(true,true)); );
+			set(view.fisheyefovlink, 0.5);
+			if(panoview.fov LE view.fov, tween(view.fov, get(panoview.fov), distance(50, 0.45)); );
+		);
+	);
+</action>
+
+<action name="stopSetViewTweens">
+	stoptween(view.fov);
+	stoptween(view.fovmax);
+	stoptween(view.vlookat);
+	stoptween(view.fisheye);
+	stoptween(view.architectural);
+</action>
+</krpano>
