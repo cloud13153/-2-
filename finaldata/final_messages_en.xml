@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="en_project_title"><![CDATA[New Project]]></data>
+
+
+  <data name="en_panogroup38_title"><![CDATA[Group 38]]></data>
+
+  <data name="en_pano124_title"><![CDATA[улица]]></data>
+  <data name="en_spotpolygon178_tooltip"><![CDATA[гардероб]]></data>
+  <data name="en_pano20_title"><![CDATA[гардероб]]></data>
+  <data name="en_spotpolygon106_tooltip"><![CDATA[рекреация диваны]]></data>
+  <data name="en_spotpolygon179_tooltip"><![CDATA[улица]]></data>
+  <data name="en_spotpolygon212_tooltip"><![CDATA[буфет]]></data>
+  <data name="en_spotpolygon246_tooltip"><![CDATA[лестница]]></data>
+  <data name="en_spotpolygon1252_tooltip"><![CDATA[каб 1]]></data>
+  <data name="en_spotpolygon1253_tooltip"><![CDATA[каб 3]]></data>
+  <data name="en_spotpolygon1254_tooltip"><![CDATA[каб 2]]></data>
+  <data name="en_pano26_title"><![CDATA[каб 6]]></data>
+  <data name="en_spotpolygon117_tooltip"><![CDATA[рекреация 1 этаж]]></data>
+  <data name="en_pano25_title"><![CDATA[каб 5]]></data>
+  <data name="en_spotpolygon112_tooltip"><![CDATA[рекреация диваны]]></data>
+  <data name="en_spotpolygon390_tooltip"><![CDATA[рекреация 1 этаж]]></data>
+  <data name="en_pano24_title"><![CDATA[каб 4]]></data>
+  <data name="en_spotpolygon110_tooltip"><![CDATA[рекреация диваны]]></data>
+  <data name="en_pano23_title"><![CDATA[каб 3]]></data>
+  <data name="en_spotpolygon101_tooltip"><![CDATA[гардероб]]></data>
+  <data name="en_pano22_title"><![CDATA[каб 2]]></data>
+  <data name="en_spotpolygon105_tooltip"><![CDATA[гардероб]]></data>
+  <data name="en_pano21_title"><![CDATA[каб 1]]></data>
+  <data name="en_spotpolygon102_tooltip"><![CDATA[гардероб]]></data>
+  <data name="en_pano28_title"><![CDATA[каб 8]]></data>
+  <data name="en_spotpolygon121_tooltip"><![CDATA[рекреация 1 этаж]]></data>
+  <data name="en_pano29_title"><![CDATA[рекреация 1 этаж]]></data>
+  <data name="en_spotpolygon115_tooltip"><![CDATA[рекреация диваны]]></data>
+  <data name="en_spotpolygon116_tooltip"><![CDATA[каб 6]]></data>
+  <data name="en_spotpolygon118_tooltip"><![CDATA[каб 7]]></data>
+  <data name="en_spotpolygon120_tooltip"><![CDATA[каб 8]]></data>
+  <data name="en_spotpolygon391_tooltip"><![CDATA[каб 5]]></data>
+  <data name="en_pano30_title"><![CDATA[рекреация диваны]]></data>
+  <data name="en_spotpolygon107_tooltip"><![CDATA[гардероб]]></data>
+  <data name="en_spotpolygon109_tooltip"><![CDATA[каб 4]]></data>
+  <data name="en_spotpolygon111_tooltip"><![CDATA[каб 5]]></data>
+  <data name="en_spotpolygon114_tooltip"><![CDATA[рекреация 1 этаж]]></data>
+  <data name="en_spotpolygon383_tooltip"><![CDATA[рекреация 2 этаж ]]></data>
+  <data name="en_pano27_title"><![CDATA[каб 7]]></data>
+  <data name="en_spotpolygon119_tooltip"><![CDATA[рекреация 1 этаж]]></data>
+  <data name="en_pano126_title"><![CDATA[спортзал]]></data>
+  <data name="en_spotpolygon215_tooltip"><![CDATA[буфет]]></data>
+  <data name="en_pano122_title"><![CDATA[столовая]]></data>
+  <data name="en_spotpolygon217_tooltip"><![CDATA[буфет]]></data>
+  <data name="en_pano210_title"><![CDATA[буфет]]></data>
+  <data name="en_spotpolygon213_tooltip"><![CDATA[гардероб]]></data>
+  <data name="en_spotpolygon214_tooltip"><![CDATA[спортзал]]></data>
+  <data name="en_spotpolygon216_tooltip"><![CDATA[столовая]]></data>
+
+  <data name="en_panogroup241_title"><![CDATA[Group 241]]></data>
+
+  <data name="en_pano228_title"><![CDATA[каб 9]]></data>
+  <data name="en_spotpolygon261_tooltip"><![CDATA[рекреация 2 этаж ]]></data>
+  <data name="en_pano230_title"><![CDATA[лестница]]></data>
+  <data name="en_spotpolygon247_tooltip"><![CDATA[гардероб]]></data>
+  <data name="en_spotpolygon248_tooltip"><![CDATA[каб 16]]></data>
+  <data name="en_spotpolygon249_tooltip"><![CDATA[коридор каб  16]]></data>
+  <data name="en_spotpolygon384_tooltip"><![CDATA[рекреация каб 17]]></data>
+  <data name="en_pano229_title"><![CDATA[коридор каб  16]]></data>
+  <data name="en_spotpolygon250_tooltip"><![CDATA[лестница]]></data>
+  <data name="en_spotpolygon253_tooltip"><![CDATA[каб 16]]></data>
+  <data name="en_spotpolygon254_tooltip"><![CDATA[каб 15]]></data>
+  <data name="en_spotpolygon256_tooltip"><![CDATA[каб 14]]></data>
+  <data name="en_spotpolygon258_tooltip"><![CDATA[рекреация 2 этаж ]]></data>
+  <data name="en_pano226_title"><![CDATA[каб 17]]></data>
+  <data name="en_spotpolygon389_tooltip"><![CDATA[рекреация каб 17]]></data>
+  <data name="en_pano225_title"><![CDATA[каб 16]]></data>
+  <data name="en_spotpolygon251_tooltip"><![CDATA[коридор каб  16]]></data>
+  <data name="en_spotpolygon252_tooltip"><![CDATA[лестница]]></data>
+  <data name="en_pano222_title"><![CDATA[каб 13]]></data>
+  <data name="en_spotpolygon379_tooltip"><![CDATA[рекреация 13 каб]]></data>
+  <data name="en_pano221_title"><![CDATA[каб 12]]></data>
+  <data name="en_spotpolygon381_tooltip"><![CDATA[рекреация 13 каб]]></data>
+  <data name="en_pano224_title"><![CDATA[каб 15]]></data>
+  <data name="en_spotpolygon255_tooltip"><![CDATA[коридор каб  16]]></data>
+  <data name="en_pano223_title"><![CDATA[каб 14]]></data>
+  <data name="en_spotpolygon257_tooltip"><![CDATA[коридор каб  16]]></data>
+  <data name="en_spotpolygon476_tooltip"><![CDATA[рекреация 2 этаж ]]></data>
+  <data name="en_pano220_title"><![CDATA[каб 10]]></data>
+  <data name="en_spotpolygon263_tooltip"><![CDATA[рекреация 2 этаж ]]></data>
+  <data name="en_spotpolygon266_tooltip"><![CDATA[рекреация 13 каб]]></data>
+  <data name="en_pano218_title"><![CDATA[рекреация 2 этаж ]]></data>
+  <data name="en_spotpolygon259_tooltip"><![CDATA[коридор каб  16]]></data>
+  <data name="en_spotpolygon260_tooltip"><![CDATA[коридор каб  16]]></data>
+  <data name="en_spotpolygon262_tooltip"><![CDATA[коридор каб  16]]></data>
+  <data name="en_spotpolygon264_tooltip"><![CDATA[коридор каб  16]]></data>
+  <data name="en_spotpolygon382_tooltip"><![CDATA[коридор каб  16]]></data>
+  <data name="en_pano232_title"><![CDATA[рекреация каб 17]]></data>
+  <data name="en_spotpolygon385_tooltip"><![CDATA[лестница]]></data>
+  <data name="en_spotpolygon386_tooltip"><![CDATA[каб 18]]></data>
+  <data name="en_spotpolygon388_tooltip"><![CDATA[каб 17]]></data>
+  <data name="en_pano231_title"><![CDATA[рекреация 13 каб]]></data>
+  <data name="en_spotpolygon265_tooltip"><![CDATA[рекреация 2 этаж ]]></data>
+  <data name="en_spotpolygon267_tooltip"><![CDATA[каб 10]]></data>
+  <data name="en_spotpolygon269_tooltip"><![CDATA[каб 13]]></data>
+  <data name="en_spotpolygon380_tooltip"><![CDATA[каб 12]]></data>
+  <data name="en_spotpolygon475_tooltip"><![CDATA[каб 11]]></data>
+  <data name="en_pano227_title"><![CDATA[каб 18]]></data>
+  <data name="en_spotpolygon387_tooltip"><![CDATA[рекреация каб 17]]></data>
+  <data name="en_pano472_title"><![CDATA[каб 11]]></data>
+  <data name="en_spotpolygon474_tooltip"><![CDATA[рекреация 13 каб]]></data>
+
+
+
+
+
+
+  <data name="en_contextmenuopenFsLabel"><![CDATA[Enter Fullscreen]]></data>
+  <data name="en_contextmenucloseFsLabel"><![CDATA[Exit Fullscreen]]></data>
+  <data name="en_contextmenunormallabel"><![CDATA[Normal View]]></data>
+  <data name="en_contextmenuarchitecturallabel"><![CDATA[Architectural View]]></data>
+  <data name="en_contextmenulittleplanetlabel"><![CDATA[Little Planet View]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>
