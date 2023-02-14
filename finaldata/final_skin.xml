@@ -1,41 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <krpano version="1.17">
 
-    
-  <!-- Spot Style - Load panorama -->
-  <style name="IconLoadpanorama"
-         url="%FIRSTXML%/spots/hotspot_neutral_sequence_user_defaultpoint5.png"
-         visible="false"
-
-         frame="0"
-         lastframe="17"
-         framewidth="40"
-         frameheight="40"
-         stopspotsequence="false"
-         onloaded="setdefaultanimatedspotframe();startspotanimation(0.1);"
-
-         onhover="onhoverIconLoadpanorama"
-         onout="onoutIconLoadpanorama"
-         />
-  <action name="onhoverIconLoadpanorama">
-    showtooltip(hotspot);
-  </action>
-  <action name="onoutIconLoadpanorama">
-    hideTooltip();
-
-
-
-  </action>
-
   
   <!-- Spot Style - Default Polygon Spot Style -->
   <style name="PolygonDefaultPolygonSpotStyle"
            visible="false"
            borderwidth="0"
            borderwidthhover="4"
-           bordercolor="0x2200ff" borderalpha="1"
+           bordercolor="0x0033ff" borderalpha="1"
            fillcolor="0x002aff"   fillalpha="1"
-           bordercolorhover="0x2200ff" borderalphahover="1"
+           bordercolorhover="0x0033ff" borderalphahover="1"
            fillcolorhover="0x002aff"   fillalphahover="1"
            capture="false"
            onhover="onhoverPolygonDefaultPolygonSpotStyle"
