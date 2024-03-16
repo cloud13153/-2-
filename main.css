@@ -51,8 +51,9 @@ user-select: none;
 	font-weight: bold;
 	width:400px;
 }
+	
 ul{
-	position:absolute;
+	position:fixed;
 	list-style-type:none;
 	color:white;
 	margin: 0px;
@@ -63,6 +64,7 @@ ul{
     left:900px;
     weght:180px;
     line-height:36px;
+    max-width: 600px;
 }
 li {
     display: inline;
