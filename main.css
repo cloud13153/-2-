@@ -44,12 +44,14 @@ user-select: none;
 	height:130px;
 	position: relative;
 }
-#hhh{
-	font-size: 16px;
-	padding:20px;
+#www{
+	font-size: 38px;
 	color:white;
 	font-weight: bold;
-	width:400px;
+	left:130px;
+	top:42px;
+	position: absolute;
+	font-family: Arial;
 }
 	
 ul{
@@ -63,7 +65,7 @@ ul{
     top:32px;
     left:900px;
     weght:180px;
-    line-height:36px;
+    line-height:32px;
     max-width: 600px;
 }
 li {
@@ -76,4 +78,29 @@ li {
 	position: absolute;
 	left:1430px;
 	top:40px;
+}	
+#hhh{
+	position: absolute;
+	height: 120px;
+	left:5px;
+	top:6px;
 }
+ [data-title] {
+     position: relative; /* Относительное позиционирование */ 
+     cursor: help; /* Меняем курсор на справочный */
+   }
+   [data-title]::after {
+     content: attr(data-title); /* Выводим текст из атрибута data-title */
+     position: absolute; /* Абсолютное позиционирование */
+     left: 0px; top: 125px; /* Положение подсказки */
+     opacity: 0; /* Скрываем подсказку, делая её прозрачной */
+     transition: 1s; /* Время появления подсказки */
+     pointer-events: none; /* Подсказка не реагирует на курсор */
+     background: rgba(57, 137, 201, 0.9); /* Синий цвет фона */
+     color: #fff; /* Белый цвет текста */
+     padding: 0.5em; /* Поля вокруг текста */
+     z-index: 1;
+   }
+   [data-title]:hover::after {
+     opacity: 1; /* Показываем подсказку */
+   }
